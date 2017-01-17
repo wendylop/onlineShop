@@ -1,0 +1,13 @@
+<template name="products">
+<div class="container products">
+   <h1>Available Products</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque maiores incidunt, enim temporibus esse omnis consequatur ullam dolorem. Iure animi velit temporibus modi nemo et quia rerum natus praesentium fugit!
+        </p>
+        <hr>
+  <div class="row category-credit" style="margin-top:20px">
+    {{#each products}}
+      {{> productCard}}
+    {{/each}}
+  </div>
+</div>
+</template>
