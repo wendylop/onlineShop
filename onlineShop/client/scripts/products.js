@@ -1,5 +1,5 @@
 Template.products.helpers({
   products: function() {
-    return Products;
+    return Products.find();
   }
 })
