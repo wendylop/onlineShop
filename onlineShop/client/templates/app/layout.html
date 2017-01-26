@@ -1,0 +1,32 @@
+
+<head>
+ <meta charset="UTF-8">
+   <title>TV-Series Shop!</title>
+  
+</head>
+<!--<body>
+	<h1>Welcome</h1>
+	<button id="saveText">Save</button>
+<div id="wysiwyg_editor">
+	Some text!!!
+
+	</div>
+	
+</body>-->
+
+
+
+<template name ="page1">
+	<h2>Page One</h2>
+	<p>Some text from url:<strong>{{SomeText}}</strong> </p>
+	</template>
+
+ 
+ <template name="layout">
+
+    {{>navbar}}
+ 
+    {{>yield}}
+
+    {{>footer}}
+  </template>
