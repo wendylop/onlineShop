@@ -1,24 +1,66 @@
-'use strict';
+//'use strict';
 
 Router.configure({
     layoutTemplate: 'layout',
-    notFoundTemplate: '404'
+    loadingTemplate: 'loading',
+    notFoundTemplate: '404',
+    //waitOn: function() { return Meteor.subscribe('Products'); }
 });
 
-Router.route('/', function () {
-    this.render('products');
-});
+//Router.router('/', {
+  //name : 'homeIndex',
+  //data : function (){
+   // return{
+    //  message : 'Welcome to te TV-Serie Shop'
+    //}
+  //}
+//});
 
-Router.route('/about', function () {
-    this.render('about');
-});
 
-Router.route('/products/:id', function () {
-    var that = this;
-    var product = _.find(Products, function (prod) {
-        return (prod.id === that.params.id);
+Router.route('/one/:userText', function () {
+    this.render('page1', {
+          data:{
+            SomeText:this.params.userText
+          }  
+        //data:function(){return Item.findOne({_id: this.params._id});}
     });
-    this.render('productDetail', {
-        data: product
-    });
 });
+
+Router.route('/', {
+    name: "home"
+});
+
+Router.route('/about', {
+    name: "About"
+});
+
+Router.route('/contact', {
+    name: "Contact"
+});
+
+Router.route("/products/:serie", {
+  name : "productsShow",
+  data : function(){
+
+    return Products.findOne({serie : this.params.serie});
+ 
+}
+});
+//Router.route('/products/:_id', 
+ //   function () {
+ //   var that = this;
+  //  var product = find(Products, function (prod) {
+   //     return (prod ._id === that.params._id);
+   // });
+   // this.render('productDetail', {
+   //     data: product
+   // });
+//});
+
+//Router.route('/productDetail/_id', function () {
+ //   this.render('productsDetail');
+//});
+
+        //name: 'productDetail',
+        //data: function() { return Products.findOne(this.params._id); }
+ 
