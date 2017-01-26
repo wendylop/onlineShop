@@ -1,0 +1,32 @@
+body{
+	padding-top: 0px;
+	font-family: cursive;
+}
+div.well {
+	    margin-bottom: 0px;
+}
+
+nav.navbar {
+
+    margin-bottom: 0px;
+    
+}
+.jumbotron {
+    
+    padding-bottom: 5px;
+  }
+.navbar-i
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+
+.loading-message {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.sk-spinner-rotating-plane.sk-spinner {
+  background-color: #fff;
+}
