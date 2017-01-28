@@ -177,4 +177,18 @@ if(Products.find().count() === 0){
     Products.insert(product);
     console.log("Inserted ", product.serie);
   })
+
 }
+
+  if (Meteor.users.find().count() === 0){
+    var id = Accounts.createUser({
+      username : "Administrator",
+      email: "admin@test.com",
+      password: "admin123",
+      profile: { name: "TestAdmin" },
+      roles : []
+    });
+
+    Roles.addUsersToRoles (id, ["Administrator"]);
+    console.log("Added Admin user...")
+  }
