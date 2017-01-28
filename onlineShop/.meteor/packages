@@ -33,3 +33,4 @@ iron:middleware-stack
 summernote:summernote
 pcel:loading
 alanning:roles
+autopublish
