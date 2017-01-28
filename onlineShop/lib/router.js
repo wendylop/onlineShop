@@ -39,7 +39,7 @@ Router.route('/contact', {
 });
 
 Router.route("/products/:serie", {
-  name : "productsShow",
+  name : "productsDetails",
   data : function(){
 
     return Products.findOne({serie : this.params.serie});
