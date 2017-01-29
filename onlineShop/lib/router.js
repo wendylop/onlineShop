@@ -46,6 +46,17 @@ Router.route("/products/:serie", {
  
 }
 });
+
+Router.route("/vendors/:slug", {
+  name : "vendorsDetails",
+  data : function(){
+
+    return Vendors.findOne({slug : this.params.slug});
+ 
+}
+});
+
+
 //Router.route('/products/:_id', 
  //   function () {
  //   var that = this;

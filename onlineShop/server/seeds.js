@@ -13,7 +13,7 @@ var productSeeds =  [
     "cost" : 2320,
     "vendor" : {
       "id" : 1,
-      "slug" : "warner Bros. Television",
+      "slug" : "warner-Bros.-Television",
       "name" : "Warner Bros. Television"
     }
   },
@@ -30,7 +30,7 @@ var productSeeds =  [
     "cost" : 3345,
     "vendor" : {
       "id" : 2,
-      "slug" : "TNT Serie",
+      "slug" : "TNT-Serie",
       "name" : "TNT Serie"
     }
   },
@@ -47,8 +47,8 @@ var productSeeds =  [
     "cost" : 67743,
     "vendor" : {
       "id" : 1,
-      "slug" : "Walt Disney Studios Home Entertainment",
-      "name" : "Walt Disney Studios Home Entertainment"
+      "slug" : "warner-Bros.-Television",
+      "name" : "Warner Bros. Television"
     }
   },
   {
@@ -64,8 +64,8 @@ var productSeeds =  [
     "cost" : 53212,
     "vendor" : {
       "id" : 1,
-      "slug" : "AMC Studios",
-      "name" : "AMC Studios"
+      "slug" : "warner-Bros.-Television",
+      "name" : "Warner Bros. Television"
     }
   },
   {
@@ -81,8 +81,8 @@ var productSeeds =  [
     "cost" : 2320,
     "vendor" : {
       "id" : 3,
-      "slug" : "High Bridge Entertainment",
-      "name" : "High Bridge Entertainment"
+      "slug" : "Walt-Disney-Studios-Home-Entertainment",
+      "name" : "Walt Disney Studios Home Entertainment"
     }
   },
   {
@@ -98,8 +98,8 @@ var productSeeds =  [
     "cost" : 887,
     "vendor" : {
       "id" : 3,
-      "slug" : "Carnival Films",
-      "name" : "Carnival Films"
+      "slug" : "Walt-Disney-Studios-Home-Entertainment",
+      "name" : "Walt Disney Studios Home Entertainment"
     }
   },
   {
@@ -115,8 +115,8 @@ var productSeeds =  [
     "cost" : 4432,
     "vendor" : {
       "id" : 3,
-      "slug" : "King Size Productions",
-      "name" : "King Size Productions"
+      "slug" : "Walt-Disney-Studios-Home-Entertainment",
+      "name" : "Walt Disney Studios Home Entertainment"
     }
   },
   {
@@ -131,7 +131,7 @@ var productSeeds =  [
     "published_at" : new Date(),
     "cost" : 65332,
     "vendor" : {
-      "id" : 1,
+      "id" : 4,
       "slug" : "Television",
       "name" : "Television"
     }
@@ -149,8 +149,8 @@ var productSeeds =  [
     "cost" : 5467,
     "vendor" : {
       "id" : 2,
-      "slug" : "Left Bank Pictures",
-      "name" : "Left Bank Pictures"
+      "slug" : "TNT-Serie",
+      "name" : "TNT Serie"
     }
   },
   {
@@ -166,8 +166,8 @@ var productSeeds =  [
     "cost" : 45532,
     "vendor" : {
       "id" : 2,
-      "slug" : "The Tannenbaum Company",
-      "name" : "The Tannenbaum Company"
+      "slug" : "TNT-Serie",
+      "name" : "TNT Serie"
     }
   }
 ];
@@ -192,3 +192,39 @@ if(Products.find().count() === 0){
     Roles.addUsersToRoles (id, ["Administrator"]);
     console.log("Added Admin user...")
   }
+
+  if (Vendors.find().count() === 0){
+      var vendors = [
+    {
+      id : 1,
+      slug : "warner-Bros.-Television",
+      name : "Warner Bros. Television",
+      description: "Warner Bros. Television (WBTV) is the television production arm of Warner Bros. Entertainment, itself part of Time Warner. Alongside CBS Television Studios, it serves as a television production arm of The CW Television Network, though it also produces shows for other networks, such as Shameless on Showtime, The Leftovers and Westworld on HBO. As of 2015, it is the world's largest television production company measured by revenue and library.Its most notable TV shows include Friends, ER, The West Wing, Smallville, Supernatural, The Big Bang Theory, and Full House.."
+    },
+    {
+      id : 2,
+      slug : "TNT-Serie",
+      name : "TNT Serie",
+      description: "TNT Serie is a German television channel dedicated to television series.The station is operated by Turner Broadcasting System Europe and launched on 28 January 2009. Since 1 June 2009 the channel has broadcast around the clock. It is available through cable, satellite television and IPTV in the pay television packages of HanseNet, Kabel Deutschland, Sky and Unitymedia."
+    },
+    {
+      id : 3,
+      slug : "Walt-Disney-Studios-Home-Entertainment",
+      name : "Walt Disney Studios Home Entertainment",
+      description : "Walt Disney Studios Home Entertainment (incorporated as Buena Vista Home Entertainment, Inc. since 1997] and formerly known as **Walt Disney Telecommunications & Non-Theatrical Company** from 1980 to 1987 and eventually Buena Vista Home Video until 1997) is the home video distribution division of The Walt Disney Company. Disney began distributing videos under its own label in 1980 under the name Walt Disney Home Video."
+    },
+    {
+      id : 4,
+      slug : "Gaumont-International-Television",
+      name : "Gaumont International Television",
+      description : "Gaumont Television (sometimes written as GIT or GITV) is an American television division of the French Gaumont. It was launched on September 12, 2011 as an independent studio based in Los Angeles, designed to produce drama and comedy television programming for the U.S. and international markets."
+    }
+  ];
+  
+    _.each(vendors, function(vendor){
+    Vendors.insert(vendor);
+    console.log("Added ", vendor.name);
+  });
+}
+
+
