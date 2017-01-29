@@ -8,20 +8,20 @@ Router.configure({
 });
 
 //Router.router('/', {
-  //name : 'homeIndex',
-  //data : function (){
-   // return{
-    //  message : 'Welcome to te TV-Serie Shop'
-    //}
-  //}
+//name : 'homeIndex',
+//data : function (){
+// return{
+//  message : 'Welcome to te TV-Serie Shop'
+//}
+//}
 //});
 
 
 Router.route('/one/:userText', function () {
     this.render('page1', {
-          data:{
-            SomeText:this.params.userText
-          }  
+        data: {
+            SomeText: this.params.userText
+        }
         //data:function(){return Item.findOne({_id: this.params._id});}
     });
 });
@@ -39,39 +39,38 @@ Router.route('/contact', {
 });
 
 Router.route("/products/:serie", {
-  name : "productsDetails",
-  data : function(){
-
-    return Products.findOne({serie : this.params.serie});
- 
-}
+    name: "productsDetails",
+    data: function () {
+        return Products.findOne({serie: this.params.serie});
+    }
 });
 
 Router.route("/vendors/:slug", {
-  name : "vendorsDetails",
-  data : function(){
+    name: "vendorsDetails",
+    data: function () {
+        return Vendors.findOne({slug: this.params.slug});
 
-    return Vendors.findOne({slug : this.params.slug});
- 
-}
+    }
 });
 
 
 //Router.route('/products/:_id', 
- //   function () {
- //   var that = this;
-  //  var product = find(Products, function (prod) {
-   //     return (prod ._id === that.params._id);
-   // });
-   // this.render('productDetail', {
-   //     data: product
-   // });
+//   function () {
+//   var that = this;
+//  var product = find(Products, function (prod) {
+//     return (prod ._id === that.params._id);
+// });
+// this.render('productDetail', {
+//     data: product
+// });
 //});
 
 //Router.route('/productDetail/_id', function () {
- //   this.render('productsDetail');
+//   this.render('productsDetail');
 //});
 
-        //name: 'productDetail',
-        //data: function() { return Products.findOne(this.params._id); }
- 
+//name: 'productDetail',
+//data: function() { return Products.findOne(this.params._id); }
+
+
+
