@@ -53,8 +53,14 @@ Router.route("/vendors/:slug", {
     }
 });
 
+Router.route("/cart", {
+    name: "cartDetails"
+});
 
-//Router.route('/products/:_id', 
+Router.route("/checkout",{
+  name:"checkoutDetails"
+});
+//Router.route('/products/:_id',
 //   function () {
 //   var that = this;
 //  var product = find(Products, function (prod) {
@@ -71,6 +77,3 @@ Router.route("/vendors/:slug", {
 
 //name: 'productDetail',
 //data: function() { return Products.findOne(this.params._id); }
-
-
-

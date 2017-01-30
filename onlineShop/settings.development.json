@@ -1,0 +1,7 @@
+{
+  "stripeSecretKey": "STRIPE SECRET",
+  "public": {
+    "stripePublicKey": "STRIPE PUBLIC"
+  }
+
+}
