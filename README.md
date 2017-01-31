@@ -16,7 +16,7 @@ Repository for the web application course.
 ## Installation
 2. Pull the source from this repo (or just download it).
 
-3. go to Project file (in Terminal) `cd [Projectname]` and install: 
+3. go to Project file (in Terminal) `cd [Projectname]` and type: 
  - meteor npm install
  - meteor npm install --save babel-runtime
  - meteor npm install --save bcrypt
