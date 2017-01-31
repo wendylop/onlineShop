@@ -30,3 +30,16 @@ nav.navbar {
 .sk-spinner-rotating-plane.sk-spinner {
   background-color: #fff;
 }
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+
+div.well {
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
